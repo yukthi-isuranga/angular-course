@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './filter.css',
 })
 export class Filter {
-  allFilter: number = 0;
-  ComputersFilter: number = 0;
-  AccessoriesFilter: number = 0;
-  AudioFilter: number = 0;
-  DisplaysFilter: number = 0;
+  @Input() allFilter: number = 0;
+  @Input() ComputersFilter: number = 0;
+  @Input() AccessoriesFilter: number = 0;
+  @Input() AudioFilter: number = 0;
+  @Input() DisplaysFilter: number = 0;
 }

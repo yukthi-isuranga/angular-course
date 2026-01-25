@@ -2,6 +2,13 @@
   <p>Number is:{{ item }}</p>
 </div> -->
 
+<app-search /><app-filter
+  [allFilter]="getAllCount()"
+  [ComputersFilter]="getComputersCount()"
+  [AccessoriesFilter]="getAccessoriesCount()"
+  [AudioFilter]="getAudioCount()"
+  [DisplaysFilter]="getDisplaysCount()"
+/>
 <div *ngFor="let item of products">
   <div
     class="product-container"

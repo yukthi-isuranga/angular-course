@@ -1,9 +1,11 @@
 import { NgFor, NgStyle, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { Search } from '../search/search';
+import { Filter } from '../filter/filter';
 
 @Component({
   selector: 'app-products',
-  imports: [NgFor, NgStyle, NgIf],
+  imports: [NgFor, NgStyle, NgIf, Search, Filter],
   templateUrl: './products.html',
   styleUrl: './products.css',
 })
@@ -65,4 +67,24 @@ export class Products {
       category: 'Displays',
     },
   ];
+
+  getAllCount() {
+    return this.products.length;
+  }
+
+  getComputersCount() {
+    return this.products.filter((e) => e.category === 'Computers').length;
+  }
+
+  getAccessoriesCount() {
+    return this.products.filter((e) => e.category === 'Accessories').length;
+  }
+
+  getAudioCount() {
+    return this.products.filter((e) => e.category === 'Audio').length;
+  }
+
+  getDisplaysCount() {
+    return this.products.filter((e) => e.category === 'Displays').length;
+  }
 }

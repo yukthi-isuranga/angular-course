@@ -1,0 +1,5 @@
+<!-- <div class="alert" [hidden]="notificationValue"> -->
+<div class="alert" [ngClass]="{ fadeOut: notificationValue }">
+  <span class="closebtn" (click)="closeNotification()"></span>
+  Info! Indicates a neutral informative change or action.
+</div>

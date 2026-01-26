@@ -1,5 +1,5 @@
 import { NgFor, NgStyle, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Search } from '../search/search';
 import { Filter } from '../filter/filter';
 
@@ -93,5 +93,11 @@ export class Products {
   filterChangeParent(data: string) {
     this.filterRadioParent = data;
     console.log(data + ' Parent component value......');
+  }
+
+  searchValue: string = '';
+
+  serchValueAssign(data: string) {
+    this.searchValue = data;
   }
 }

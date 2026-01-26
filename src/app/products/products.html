@@ -2,7 +2,7 @@
   <p>Number is:{{ item }}</p>
 </div> -->
 
-<app-search /><app-filter
+<app-search (searchValueEmmiter)="serchValueAssign($event)" /><app-filter
   [allFilter]="getAllCount()"
   [ComputersFilter]="getComputersCount()"
   [AccessoriesFilter]="getAccessoriesCount()"
@@ -10,8 +10,9 @@
   [DisplaysFilter]="getDisplaysCount()"
   (filterRadioChnageChild)="filterChangeParent($event)"
 />
-<ng-container *ngFor="let item of products"
-  ><div *ngIf="filterRadioParent === 'All' || filterRadioParent === item.category">
+<ng-container *ngFor="let item of products">
+  <!-- *ngIf="filterRadioParent === 'All' || filterRadioParent === item.category" -->
+  <div *ngIf="searchValue === '' || item.name.toLowerCase().includes(searchValue)">
     <div
       class="product-container"
       [ngStyle]="{ backgroundColor: item.inStock ? '#D5F5E3' : '#FADBD8' }"

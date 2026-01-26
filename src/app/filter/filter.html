@@ -2,27 +2,57 @@
   <p>Filter by Category:</p>
 
   <label class="radio-item">
-    <input type="radio" name="category" value="All" checked />
+    <input
+      type="radio"
+      name="category"
+      value="All"
+      [(ngModel)]="selectedFilterIs"
+      (change)="filterFunction()"
+    />
     <span>{{ 'All (' + allFilter + ')' }}</span>
   </label>
 
   <label class="radio-item">
-    <input type="radio" name="category" value="Computers" />
+    <input
+      type="radio"
+      name="category"
+      value="Computers"
+      [(ngModel)]="selectedFilterIs"
+      (change)="filterFunction()"
+    />
     <span>{{ 'Computers (' + ComputersFilter + ')' }}</span>
   </label>
 
   <label class="radio-item">
-    <input type="radio" name="category" value="Accessories" />
+    <input
+      type="radio"
+      name="category"
+      value="Accessories"
+      [(ngModel)]="selectedFilterIs"
+      (change)="filterFunction()"
+    />
     <span>{{ 'Accessories (' + AccessoriesFilter + ')' }}</span>
   </label>
 
   <label class="radio-item">
-    <input type="radio" name="category" value="Audio" />
+    <input
+      type="radio"
+      name="category"
+      value="Audio"
+      [(ngModel)]="selectedFilterIs"
+      (change)="filterFunction()"
+    />
     <span>{{ 'Audio (' + AudioFilter + ')' }}</span>
   </label>
 
   <label class="radio-item">
-    <input type="radio" name="category" value="Displays" />
+    <input
+      type="radio"
+      name="category"
+      value="Displays"
+      [(ngModel)]="selectedFilterIs"
+      (change)="filterFunction()"
+    />
     <span>{{ 'Displays (' + DisplaysFilter + ')' }}</span>
   </label>
 </form>

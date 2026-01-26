@@ -87,4 +87,11 @@ export class Products {
   getDisplaysCount() {
     return this.products.filter((e) => e.category === 'Displays').length;
   }
+
+  filterRadioParent: string = 'All';
+
+  filterChangeParent(data: string) {
+    this.filterRadioParent = data;
+    console.log(data + ' Parent component value......');
+  }
 }

@@ -8,31 +8,34 @@
   [AccessoriesFilter]="getAccessoriesCount()"
   [AudioFilter]="getAudioCount()"
   [DisplaysFilter]="getDisplaysCount()"
+  (filterRadioChnageChild)="filterChangeParent($event)"
 />
-<div *ngFor="let item of products">
-  <div
-    class="product-container"
-    [ngStyle]="{ backgroundColor: item.inStock ? '#D5F5E3' : '#FADBD8' }"
-  >
-    <div class="image-container">
-      <img [src]="item.imageUrl" style="max-height: 50px; max-width: 50px" />
-    </div>
-    <div>
-      <div class="name-container">
-        <h6>{{ item.name }}</h6>
+<ng-container *ngFor="let item of products"
+  ><div *ngIf="filterRadioParent === 'All' || filterRadioParent === item.category">
+    <div
+      class="product-container"
+      [ngStyle]="{ backgroundColor: item.inStock ? '#D5F5E3' : '#FADBD8' }"
+    >
+      <div class="image-container">
+        <img [src]="item.imageUrl" style="max-height: 50px; max-width: 50px" />
       </div>
-      <div class="details-container">
-        <div class="details" [ngStyle]="{ color: item.inStock ? 'green' : 'red' }">
-          {{ item.inStock }}
+      <div>
+        <div class="name-container">
+          <h6>{{ item.name }}</h6>
         </div>
-        <div class="details">{{ item.price }}</div>
-        <div class="details">{{ item.description }}</div>
+        <div class="details-container">
+          <div class="details" [ngStyle]="{ color: item.inStock ? 'green' : 'red' }">
+            {{ item.inStock }}
+          </div>
+          <div class="details">{{ item.price }}</div>
+          <div class="details">{{ item.description }}</div>
+        </div>
+      </div>
+      <div class="option">
+        <button class="btn btn-success">Show details</button>
+        <button class="btn btn-warning" *ngIf="item.inStock; else notifyme">Buy Now</button>
+        <ng-template #notifyme><button class="btn btn-warning">Notify me</button></ng-template>
       </div>
     </div>
-    <div class="option">
-      <button class="btn btn-success">Show details</button>
-      <button class="btn btn-warning" *ngIf="item.inStock; else notifyme">Buy Now</button>
-      <ng-template #notifyme><button class="btn btn-warning">Notify me</button></ng-template>
-    </div>
-  </div>
-</div>
+  </div></ng-container
+>

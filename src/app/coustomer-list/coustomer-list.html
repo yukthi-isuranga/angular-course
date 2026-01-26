@@ -1,0 +1,28 @@
+<table class="customer-table">
+  <thead>
+    <tr>
+      <th>Customer No</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Contact No</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.customerNo }}</td>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.address }}</td>
+      <td>{{ customer.city }}</td>
+      <td>{{ customer.country }}</td>
+      <td>{{ customer.contactNo }}</td>
+      <td>
+        <button class="btn-select" (click)="coustomerSelect = customer">Select</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- <p>you are select {{ coustomerSelect?.name }}</p> -->

@@ -1,0 +1,65 @@
+/* Table container */
+.customer-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.customer-table thead {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.customer-table th {
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Body */
+.customer-table td {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Hover row */
+.customer-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Select button */
+.btn-select {
+  padding: 6px 14px;
+  font-size: 13px;
+  background-color: #22c55e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-select:hover {
+  background-color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .customer-table {
+    font-size: 13px;
+  }
+
+  .customer-table th,
+  .customer-table td {
+    padding: 10px;
+  }
+}

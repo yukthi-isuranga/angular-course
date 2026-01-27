@@ -9,6 +9,16 @@
   <h4 appHighlight>Yukthi Isuranga</h4>
 </div>
 
+<!-- css style using renderer2 -->
+<div class="highlight-box" appHeighlight2>
+  <div class="input-btn-wrapper">
+    <input type="text" placeholder="Enter text..." #inputComponent />
+    <button (click)="onchange(inputComponent)">Submit</button>
+  </div>
+</div>
+
+<div appHeighlight2><h2>Yukthi Isuranga renderer2</h2></div>
+
 <app-hooks-demo2 [inputText]="inputValue" *ngIf="destroy">
   <h4>This is project content {{ inputValue }}</h4>
 </app-hooks-demo2>

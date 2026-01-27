@@ -48,3 +48,34 @@
     width: 100%;
   }
 }
+
+/* Highlight container */
+.highlight-box {
+  width: 420px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  border: 2px dashed #38bdf8;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Optional hover effect */
+.highlight-box:hover {
+  background-color: #e0f2fe;
+  border-color: #0284c7;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .highlight-box {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+  }
+}

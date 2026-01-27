@@ -1,6 +1,12 @@
-<div class="input-btn-wrapper">
-  <input type="text" placeholder="Enter text..." #inputComponent />
-  <button (click)="onchange(inputComponent)">Submit</button>
+<div class="highlight-box" appHighlight>
+  <div class="input-btn-wrapper">
+    <input type="text" placeholder="Enter text..." #inputComponent />
+    <button (click)="onchange(inputComponent)">Submit</button>
+  </div>
+</div>
+
+<div>
+  <h4 appHighlight>Yukthi Isuranga</h4>
 </div>
 
 <app-hooks-demo2 [inputText]="inputValue" *ngIf="destroy">

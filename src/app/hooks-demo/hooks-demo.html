@@ -1,0 +1,13 @@
+<div class="input-btn-wrapper">
+  <input type="text" placeholder="Enter text..." #inputComponent />
+  <button (click)="onchange(inputComponent)">Submit</button>
+</div>
+
+<app-hooks-demo2 [inputText]="inputValue" *ngIf="destroy">
+  <h4>This is project content {{ inputValue }}</h4>
+</app-hooks-demo2>
+<br />
+<br />
+<br />
+<br />
+<button (click)="DistroyComponent()">Distroy component</button>

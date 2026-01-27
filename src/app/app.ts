@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Container } from './container/container';
 import { FormsModule } from '@angular/forms';
+import { HooksDemo } from './hooks-demo/hooks-demo';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Container, FormsModule],
+  imports: [RouterOutlet, Container, FormsModule, HooksDemo],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

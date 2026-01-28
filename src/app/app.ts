@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Container } from './container/container';
 import { FormsModule } from '@angular/forms';
 import { HooksDemo } from './hooks-demo/hooks-demo';
+import { Mostlike } from './mostlike/mostlike';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Container, FormsModule, HooksDemo],
+  imports: [RouterOutlet, Container, FormsModule, HooksDemo, Mostlike],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

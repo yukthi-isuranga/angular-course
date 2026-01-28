@@ -24,6 +24,11 @@
   <h2>HostBinding</h2>
 </div>
 
+<!-- custom app class derective -->
+<div appClass [display]="{ container: true, 'change-font': true }">
+  <h2>custom app class derective</h2>
+</div>
+
 <app-hooks-demo2 [inputText]="inputValue" *ngIf="destroy">
   <h4>This is project content {{ inputValue }}</h4>
 </app-hooks-demo2>

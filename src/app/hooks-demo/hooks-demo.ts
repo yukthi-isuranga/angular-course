@@ -4,10 +4,11 @@ import { NgIf } from '@angular/common';
 import { Highlight } from '../CustomDirective/highlight';
 import { Heighlight2 } from '../CustomDirective/heighlight2';
 import { Hover } from '../CustomDirective/hover';
+import { Betterhighlight } from '../CustomDirective/betterhighlight';
 
 @Component({
   selector: 'app-hooks-demo',
-  imports: [HooksDemo2, NgIf, Highlight, Heighlight2, Hover],
+  imports: [HooksDemo2, NgIf, Highlight, Heighlight2, Hover, Betterhighlight],
   templateUrl: './hooks-demo.html',
   styleUrl: './hooks-demo.css',
 })

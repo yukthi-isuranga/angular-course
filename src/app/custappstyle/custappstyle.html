@@ -1,3 +1,31 @@
 <div class="container" [appStyle]="{ background: 'pink', margin: '10px', fontWeight: 'bold' }">
   <p>this is custom app style derective</p>
 </div>
+
+<div class="dropdown">
+  <select [(ngModel)]="userSelectValue">
+    <option value="">Select Job Role</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Engineer">Engineer</option>
+    <option value="Doctor">Doctor</option>
+    <option value="Software Developer">Software Developer</option>
+    <option value="Accountant">Accountant</option>
+  </select>
+</div>
+
+<h2>you select {{ userSelectValue }}</h2>
+
+<div [ngSwitch]="userSelectValue">
+  <p *ngSwitchCase="'Teacher'">
+    You have selected <b>Teacher</b>. Teaching shapes future generations.
+  </p>
+  <p *ngSwitchCase="'Engineer'">You have selected <b>Engineer</b>. Engineers build solutions.</p>
+  <p *ngSwitchCase="'Doctor'">You have selected <b>Doctor</b>. Doctors save lives.</p>
+  <p *ngSwitchCase="'Software Developer'">
+    You have selected <b>Software Developer</b>. Coding the future.
+  </p>
+  <p *ngSwitchCase="'Accountant'">
+    You have selected <b>Accountant</b>. Managing finances smartly.
+  </p>
+  <p *ngSwitchDefault>Please select a job role.</p>
+</div>

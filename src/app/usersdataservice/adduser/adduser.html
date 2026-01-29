@@ -1,0 +1,17 @@
+<h1>add user to service</h1>
+
+<div>
+  <div class="form-wrapper">
+    <input type="text" placeholder="Enter name" class="form-input" [(ngModel)]="name" />
+
+    <div class="select-wrapper">
+      <select class="form-select" [(ngModel)]="status">
+        <option value="">Select status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="pending">Pending</option>
+      </select>
+    </div>
+    <button class="form-button" (click)="addNewUserToservice()">Add User</button>
+  </div>
+</div>

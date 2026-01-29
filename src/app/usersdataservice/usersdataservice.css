@@ -1,0 +1,66 @@
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Container */
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 10px;
+}
+
+/* Card */
+.user-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Name */
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* Status badge */
+.user-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Status colors */
+.user-status.active {
+  background-color: #e6f7ec;
+  color: #2e7d32;
+}
+
+.user-status.inactive {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.user-status.pending {
+  background-color: #fff4e5;
+  color: #ef6c00;
+}

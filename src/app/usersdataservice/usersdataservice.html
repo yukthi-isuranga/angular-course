@@ -1,0 +1,12 @@
+<h1 class="title">Users Data</h1>
+
+<div class="users-container">
+  <div class="user-card" *ngFor="let item of usersData">
+    <div class="user-name">{{ item.name }}</div>
+    <div class="user-status" [ngClass]="item.status">
+      {{ item.status }}
+    </div>
+  </div>
+</div>
+
+<app-adduser />

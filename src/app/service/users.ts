@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Userslog } from './userslog';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,10 @@ export class Users {
     { name: 'David', status: 'active' },
   ];
 
+  constructor(private logger: Userslog) {}
+
   AddNewUser(name: string, status: string) {
     this.users.push({ name, status });
+    this.logger.printLogMessage(name, status);
   }
 }

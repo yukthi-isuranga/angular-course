@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Style } from '../CustomDirective/style';
 import { FormsModule } from '@angular/forms';
 import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { Example } from '../service/example';
 
 @Component({
   selector: 'app-custappstyle',
@@ -11,4 +12,10 @@ import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 })
 export class Custappstyle {
   userSelectValue: string = '';
+
+  constructor(private alertservice: Example) {}
+
+  onclickAlert() {
+    this.alertservice.onClickAlertservice(this.userSelectValue);
+  }
 }

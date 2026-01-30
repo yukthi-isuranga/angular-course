@@ -6,6 +6,7 @@ import { HooksDemo } from './hooks-demo/hooks-demo';
 import { Mostlike } from './mostlike/mostlike';
 import { Custappstyle } from './custappstyle/custappstyle';
 import { Usersdataservice } from './usersdataservice/usersdataservice';
+import { Example1 } from './example1/example1';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { Usersdataservice } from './usersdataservice/usersdataservice';
     Mostlike,
     Custappstyle,
     Usersdataservice,
+    Example1,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

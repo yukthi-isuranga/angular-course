@@ -1,0 +1,8 @@
+<p class="title">User Example</p>
+
+<div *ngFor="let user of usersChild">
+  <div class="user-row">
+    <div class="user-name">Name : {{ user.name }}</div>
+    <button class="details-btn" (click)="OnclickUser(user)">Details</button>
+  </div>
+</div>
